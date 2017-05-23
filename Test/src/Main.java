@@ -3,14 +3,18 @@ public class Main {
 	
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
-		numbers num = new numbers();
+		Print num = new Print();
 		
 		for (int i = 0; i <= 9; i++){
 			num.num(i);
-			System.out.println("\n");
+			System.out.println("  ");
 		}
-
-		//.split("(?!^)")
+		
+		for (char i = 'a'; i <= 'z'; i++){
+			num.letters(i);
+			System.out.println("  ");
+		}
+		
 		System.out.println("Choose a number from 0-9 to print: " );
 		int n = in.nextInt();
 		while (n > 9){
