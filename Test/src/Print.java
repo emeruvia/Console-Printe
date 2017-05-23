@@ -1,48 +1,39 @@
 
 public class Print {
 
-	void num (int x) {
-		switch (x){
-		case 0:
+	void elementValue(char x) {
+		char y = Character.toLowerCase(x);
+		switch (y) {
+		case '0':
 			System.out.print(top() + stick() + "  " + stick() + "\n" + stick() + bot() + stick());
 			break;
-		case 1:
+		case '1':
 			System.out.print("\n   " + stick() + "\n   " + stick());
 			break;
-		case 2:
+		case '2':
 			System.out.print(top() + " " + bot() + stick() + "\n" + stick() + bot());
 			break;
-		case 3:
+		case '3':
 			System.out.print(top() + " " + bot() + stick() + "\n " + bot() + stick());
 			break;
-		case 4:
+		case '4':
 			System.out.print("\n" + stick() + bot() + stick() + "\n   " + stick());
 			break;
-		case 5:
+		case '5':
 			System.out.print(top() + stick() + bot() + "\n " + bot() + stick());
 			break;
-		case 6:
+		case '6':
 			System.out.print(top() + stick() + bot() + "\n" + stick() + bot() + stick());
 			break;
-		case 7:
-			System.out.print(top() +  "   " + stick() + "\n   " + stick());
+		case '7':
+			System.out.print(top() + "   " + stick() + "\n   " + stick());
 			break;
-		case 8:
+		case '8':
 			System.out.print(top() + stick() + bot() + stick() + "\n" + stick() + bot() + stick());
 			break;
-		case 9:
+		case '9':
 			System.out.print(top() + stick() + bot() + stick() + "\n " + bot() + stick());
 			break;
-		default:
-			System.out.print(" ");
-			break;
-		}
-			
-	}
-	
-	void letters(char x){
-		char y = Character.toLowerCase(x);
-		switch (y){
 		case 'a':
 			System.out.print(top() + botBox() + "\n" + sideSticks());
 			break;
@@ -50,7 +41,7 @@ public class Print {
 			System.out.print(top() + botBox() + "\n" + botBox());
 			break;
 		case 'c':
-			System.out.print(top() + stick() + "\n" +stick() + bot());
+			System.out.print(top() + stick() + "\n" + stick() + bot());
 			break;
 		case 'd':
 			System.out.print(top() + sideSticks() + "\n" + botBox());
@@ -65,7 +56,7 @@ public class Print {
 			System.out.print(top() + stick() + " _\n" + botBox());
 			break;
 		case 'h':
-			System.out.print("\n" +botBox() + "\n" + sideSticks());
+			System.out.print("\n" + botBox() + "\n" + sideSticks());
 			break;
 		case 'i':
 			System.out.print("___ \n | \n_|_");
@@ -80,13 +71,13 @@ public class Print {
 			System.out.print("\n" + stick() + "\n" + leftBot());
 			break;
 		case 'm':
-			System.out.print("\n" + stick() + "\\/" + stick () + "\n" + sideSticks());
+			System.out.print("\n" + stick() + "\\/" + stick() + "\n" + sideSticks());
 			break;
 		case 'n':
 			System.out.print("\n" + stick() + "\\ " + stick() + "\n" + stick() + " \\" + stick());
 			break;
 		case 'o':
-			System.out.print(top() + sideSticks() + "\n"+ botBox());
+			System.out.print(top() + sideSticks() + "\n" + botBox());
 			break;
 		case 'p':
 			System.out.print(top() + botBox() + "\n" + stick());
@@ -121,60 +112,45 @@ public class Print {
 		case 'z':
 			System.out.print(top() + "  /\n /_");
 		default:
-			System.out.print(" ");
+			System.out.println();
 			break;
-		
+
 		}
 	}
-	
-	
-	
-	String stick(){
+
+	String stick() {
 		String i = "|";
 		return i;
 	}
-	
+
 	String top() {
 		String i = " __ ";
 		return i + "\n";
 	}
+
 	String bot() {
 		String i = "__";
 		return i;
 	}
-	String botBox(){
+
+	String botBox() {
 		String i = "|__|";
 		return i;
 	}
-	String sideSticks(){
+
+	String sideSticks() {
 		String i = "|  |";
 		return i;
 	}
-	String leftBot(){
+
+	String leftBot() {
 		String i = "|__";
 		return i;
 	}
-	String rightBot(){
+
+	String rightBot() {
 		String i = " __|";
 		return i;
 	}
-	
-	
-	
-	
-	public Character[] toCharacterArray( String s ) {
 
-		   if ( s == null ) {
-		     return null;
-		   }
-
-		   int len = s.length();
-		   Character[] array = new Character[len];
-		   for (int i = 0; i < len ; i++) {
-		      array[i] = new Character(s.charAt(i));
-		   }
-
-		   return array;
-		}
-	
 }

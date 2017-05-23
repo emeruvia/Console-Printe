@@ -3,38 +3,24 @@ public class Main {
 	
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
-		Print num = new Print();
+		//Creates a value object from print
+		Print value = new Print();
+
+		//Output the welcoming message
+		System.out.println("Welcome!");
+		System.out.println("This program is a console printer. \nMeaning that anything"
+				+ "that you input into the console\nline is going to be drawn "
+				+ "into the console vertically.");
 		
-		for (int i = 0; i <= 9; i++){
-			num.num(i);
-			System.out.println("  ");
-		}
-		
-		for (char i = 'a'; i <= 'z'; i++){
-			num.letters(i);
-			System.out.println("  ");
-		}
-		
-		System.out.println("Choose a number from 0-9 to print: " );
-		int n = in.nextInt();
-		while (n > 9){
-			System.out.println("Please choose a number from 0 to 9");
-			n = in.nextInt();
-		} 
-		num.num(n);
-		
-		
-		//String
+		//Take users input
+		System.out.println("\nTry it yourself, Please enter anything: ");
 		String s = in.nextLine();
-		num.toCharacterArray(s);
-		
-		
-		
+		//This will convert the string to a character array
+		char array[] = s.toCharArray();
+		for (int i = 0; i < array.length; i++){
+			value.elementValue(array[i]);
+			System.out.println();
+		}
 		in.close();
-	
 	}
-	
-	
-	
-	
 }
