@@ -1,2 +1,4 @@
 # Console-Printer
-The purpose of this program is to have the user enter a number or words and this will print the input to the console in an analog way.
+This project is an exercise to practice console printing.
+It takes the user input into a string variable and then it converts it to a character array variable.
+After the array is created, through a for loop the values object calls the elementValues method so that every character element is going to be printed in the console vertically.
